@@ -1,0 +1,103 @@
+@import url(http://fonts.googleapis.com/css?family=Questrial|Pacifico|Roboto+Condensed:300italic,400italic,400);
+
+body
+{
+  background: #FFFFFF;
+}
+
+form
+{
+ width: 200px;
+}
+
+/*font-family: 'Questrial', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Roboto Condensed', sans-serif;*/
+
+h1
+{
+  font-family: 'Pacifico', cursive;
+  font-size: 150px;
+  padding-top: 100px;
+}
+
+legend
+{
+  padding-top: 20px;
+  font-size: 32px;
+  font-family: 'Questrial', sans-serif;
+}
+
+.all_videos
+{
+  font-family: 'Questrial', sans-serif;
+  font-size: 18px;
+}
+
+iframe
+{
+  padding-bottom: 5px;
+}
+
+.video_info
+{
+  line-height: 7px;
+}
+
+.all_videos > form
+{
+  display: inline;
+}
+
+.navbar .nav > li > a
+{
+  font-size: 16px;
+  color: black;
+  font-family: 'Questrial', sans-serif;
+}
+
+.edit_delete
+{
+  margin-top: -7px;
+  width: 100px;
+}
+
+.edit_button
+{
+  width: 64px;
+}
+
+#logo
+{
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+}
+
+.genres
+{
+  height: 60px;
+  display:inline-block;
+  padding-top: 12px;
+}
+
+.navbar .nav > li > a:hover
+{
+  color: red;
+}
+
+*
+{
+  color: black;
+}
+
+input
+{
+  width: 300px;
+}
+
+
+
+
+
+
+

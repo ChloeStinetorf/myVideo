@@ -1,0 +1,26 @@
+
+str = <iframe width="560" height="315" src="<%= @video %>" frameborder="0" allowfullscreen></iframe>
+
+str.gsub!(/(youtube[\w\.\/]+)/, )
+
+
+<% def youtube_embed(@video) %>
+  <%if youtube_url[/youtu\.be\/([^\?]*)/] %>
+    <%youtube_id = $1 %>
+ <% else %>
+    <%youtube_url[/^.*((v\/)|(embed\/)|(watch\?))\??v?=?([^\&\?]*).*/]
+    youtube_id = $5 %>
+  <% end %>
+
+  %Q{<iframe title="YouTube video player" width="640" height="390" src="http://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe>}
+end
+
+
+
+
+<!--  http://www.youtube.com/  watch?v=    k0BWlvnBmIE
+
+ http://www.youtube.com/embed/      k0BWlvnBmIE
+
+
+ @video.gsub('watch?v=', 'embed/')  -->

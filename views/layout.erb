@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap.css'>
+  <!--   <link rel="stylesheet" href="/reset.css"> -->
+    <link rel="stylesheet" href="/style.css">
+    <script src='/js/jquery-1.9.1.js'></script>
+    <script src='/bootstrap/js/bootstrap.js'></script>
+    <title>myVideo</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <nav>
+            <ul class="nav inline">
+              <li ><a id='logo' href='/'>myVideo</a></li>
+              <li ><a href='/new'>Add New</a></li>
+              <li ><a href='/artists'>View All</a></li>
+              <li><img src='/colors.png'></li>
+              <li>
+                <ul class="nav" class="inline">
+                  <li> <h4 class="brand">Your music video genres:</h4> </li>
+                   <% @nav_rows.each do |row| %>
+                    <li class="genres"><a href='/artists/<%= row['genre'] %>'><%= row['genre'] %></a></li>
+                   <% end %>
+                </ul>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <%= yield %>
+    </div>
+  </body>
+</html>

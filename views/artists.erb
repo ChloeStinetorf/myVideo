@@ -1,0 +1,19 @@
+<legend>Your music videos are here.</legend>
+  <div class="all_videos">
+  <% @rows.each do |row| %>
+      </br>
+      <iframe width="560" height="315" src="http://www.youtube.com/embed/<%= row['url'] %>" frameborder="0" allowfullscreen></iframe>
+      </br>
+      <div class="video_info"><%= row['title'] %></div>
+      </br>
+      <div class="video_info"><%= row['description'] %></div>
+      </br>
+      <div class="video_info"><%= row['genre'] %></div>
+      </br>
+      <a class="btn btn-large btn-success edit_delete edit_button" href="/artists/<%= row['id'] %>/edit">Edit</a>
+      <form action="/artists/<%= row['id'] %>/delete" method="post">
+        <button class="btn btn-large btn-danger edit_delete">Delete</button>
+      </form>
+      </br>
+  <% end %>
+</div>

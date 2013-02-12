@@ -1,0 +1,15 @@
+<fieldset>
+  <legend>Add a new music video.</legend>
+    <form method='post' action='<%= @row.nil? ? "/create" : "/artists/#{@row['id']}" %>'>
+      <!-- <p>Title:</p> -->
+      <input value='<%= @row['title'] if @row %>' placeholder='Title' type='text' name='title' autofocus>
+      <!-- <p>Description:</p> -->
+      <input value='<%= @row['description'] if @row %>' placeholder='Description' type='text' name='description'>
+      <!-- <p>URL:</p> -->
+      <input value='<%= @row['url'] if @row %>' placeholder='YouTube URL (everything after the &#34=&#34)' type='text' name='url'>
+      <!-- <span class="help-block">(Only the part after the '=')</span> -->
+      <!-- <p>Genre:</p> -->
+      <input value='<%= @row['genre'] if @row %>' placeholder='Musical genre' type='text' name='genre'>
+      <button type="submit" class="btn btn-large btn-success"><%= @row.nil? ? "Submit" : "Save changes" %></button>
+    </form>
+</fieldset>
